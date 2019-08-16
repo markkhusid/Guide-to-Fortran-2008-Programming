@@ -1,0 +1,504 @@
+
+quadratic_equation_solver_3:     file format elf32-littlearm
+
+
+Disassembly of section .init:
+
+00010608 <_init>:
+   10608:	e92d4008 	push	{r3, lr}
+   1060c:	eb00003e 	bl	1070c <call_weak_fn>
+   10610:	e8bd8008 	pop	{r3, pc}
+
+Disassembly of section .plt:
+
+00010614 <.plt>:
+   10614:	e52de004 	push	{lr}		; (str lr, [sp, #-4]!)
+   10618:	e59fe004 	ldr	lr, [pc, #4]	; 10624 <.plt+0x10>
+   1061c:	e08fe00e 	add	lr, pc, lr
+   10620:	e5bef008 	ldr	pc, [lr, #8]!
+   10624:	000109dc 	.word	0x000109dc
+
+00010628 <_gfortran_transfer_character_write@plt>:
+   10628:	e28fc600 	add	ip, pc, #0, 12
+   1062c:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   10630:	e5bcf9dc 	ldr	pc, [ip, #2524]!	; 0x9dc
+
+00010634 <abort@plt>:
+   10634:	e28fc600 	add	ip, pc, #0, 12
+   10638:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   1063c:	e5bcf9d4 	ldr	pc, [ip, #2516]!	; 0x9d4
+
+00010640 <csqrtf@plt>:
+   10640:	e28fc600 	add	ip, pc, #0, 12
+   10644:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   10648:	e5bcf9cc 	ldr	pc, [ip, #2508]!	; 0x9cc
+
+0001064c <_gfortran_st_write_done@plt>:
+   1064c:	e28fc600 	add	ip, pc, #0, 12
+   10650:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   10654:	e5bcf9c4 	ldr	pc, [ip, #2500]!	; 0x9c4
+
+00010658 <__libc_start_main@plt>:
+   10658:	e28fc600 	add	ip, pc, #0, 12
+   1065c:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   10660:	e5bcf9bc 	ldr	pc, [ip, #2492]!	; 0x9bc
+
+00010664 <__gmon_start__@plt>:
+   10664:	e28fc600 	add	ip, pc, #0, 12
+   10668:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   1066c:	e5bcf9b4 	ldr	pc, [ip, #2484]!	; 0x9b4
+
+00010670 <_gfortran_st_read_done@plt>:
+   10670:	e28fc600 	add	ip, pc, #0, 12
+   10674:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   10678:	e5bcf9ac 	ldr	pc, [ip, #2476]!	; 0x9ac
+
+0001067c <_gfortran_set_options@plt>:
+   1067c:	e28fc600 	add	ip, pc, #0, 12
+   10680:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   10684:	e5bcf9a4 	ldr	pc, [ip, #2468]!	; 0x9a4
+
+00010688 <_gfortran_set_args@plt>:
+   10688:	e28fc600 	add	ip, pc, #0, 12
+   1068c:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   10690:	e5bcf99c 	ldr	pc, [ip, #2460]!	; 0x99c
+
+00010694 <_gfortran_transfer_real_write@plt>:
+   10694:	e28fc600 	add	ip, pc, #0, 12
+   10698:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   1069c:	e5bcf994 	ldr	pc, [ip, #2452]!	; 0x994
+
+000106a0 <_gfortran_st_write@plt>:
+   106a0:	e28fc600 	add	ip, pc, #0, 12
+   106a4:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   106a8:	e5bcf98c 	ldr	pc, [ip, #2444]!	; 0x98c
+
+000106ac <_gfortran_st_read@plt>:
+   106ac:	e28fc600 	add	ip, pc, #0, 12
+   106b0:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   106b4:	e5bcf984 	ldr	pc, [ip, #2436]!	; 0x984
+
+000106b8 <_gfortran_transfer_complex_write@plt>:
+   106b8:	e28fc600 	add	ip, pc, #0, 12
+   106bc:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   106c0:	e5bcf97c 	ldr	pc, [ip, #2428]!	; 0x97c
+
+000106c4 <_gfortran_transfer_real@plt>:
+   106c4:	e28fc600 	add	ip, pc, #0, 12
+   106c8:	e28cca10 	add	ip, ip, #16, 20	; 0x10000
+   106cc:	e5bcf974 	ldr	pc, [ip, #2420]!	; 0x974
+
+Disassembly of section .text:
+
+000106d0 <_start>:
+   106d0:	e3a0b000 	mov	fp, #0
+   106d4:	e3a0e000 	mov	lr, #0
+   106d8:	e49d1004 	pop	{r1}		; (ldr r1, [sp], #4)
+   106dc:	e1a0200d 	mov	r2, sp
+   106e0:	e52d2004 	push	{r2}		; (str r2, [sp, #-4]!)
+   106e4:	e52d0004 	push	{r0}		; (str r0, [sp, #-4]!)
+   106e8:	e59fc010 	ldr	ip, [pc, #16]	; 10700 <_start+0x30>
+   106ec:	e52dc004 	push	{ip}		; (str ip, [sp, #-4]!)
+   106f0:	e59f000c 	ldr	r0, [pc, #12]	; 10704 <_start+0x34>
+   106f4:	e59f300c 	ldr	r3, [pc, #12]	; 10708 <_start+0x38>
+   106f8:	ebffffd6 	bl	10658 <__libc_start_main@plt>
+   106fc:	ebffffcc 	bl	10634 <abort@plt>
+   10700:	00010cd8 	.word	0x00010cd8
+   10704:	00010c34 	.word	0x00010c34
+   10708:	00010c78 	.word	0x00010c78
+
+0001070c <call_weak_fn>:
+   1070c:	e59f3014 	ldr	r3, [pc, #20]	; 10728 <call_weak_fn+0x1c>
+   10710:	e59f2014 	ldr	r2, [pc, #20]	; 1072c <call_weak_fn+0x20>
+   10714:	e08f3003 	add	r3, pc, r3
+   10718:	e7932002 	ldr	r2, [r3, r2]
+   1071c:	e3520000 	cmp	r2, #0
+   10720:	012fff1e 	bxeq	lr
+   10724:	eaffffce 	b	10664 <__gmon_start__@plt>
+   10728:	000108e4 	.word	0x000108e4
+   1072c:	00000044 	.word	0x00000044
+
+00010730 <deregister_tm_clones>:
+   10730:	e59f301c 	ldr	r3, [pc, #28]	; 10754 <deregister_tm_clones+0x24>
+   10734:	e59f001c 	ldr	r0, [pc, #28]	; 10758 <deregister_tm_clones+0x28>
+   10738:	e0433000 	sub	r3, r3, r0
+   1073c:	e3530006 	cmp	r3, #6
+   10740:	912fff1e 	bxls	lr
+   10744:	e59f3010 	ldr	r3, [pc, #16]	; 1075c <deregister_tm_clones+0x2c>
+   10748:	e3530000 	cmp	r3, #0
+   1074c:	012fff1e 	bxeq	lr
+   10750:	e12fff13 	bx	r3
+   10754:	00021053 	.word	0x00021053
+   10758:	00021050 	.word	0x00021050
+   1075c:	00000000 	.word	0x00000000
+
+00010760 <register_tm_clones>:
+   10760:	e59f1024 	ldr	r1, [pc, #36]	; 1078c <register_tm_clones+0x2c>
+   10764:	e59f0024 	ldr	r0, [pc, #36]	; 10790 <register_tm_clones+0x30>
+   10768:	e0411000 	sub	r1, r1, r0
+   1076c:	e1a01141 	asr	r1, r1, #2
+   10770:	e0811fa1 	add	r1, r1, r1, lsr #31
+   10774:	e1b010c1 	asrs	r1, r1, #1
+   10778:	012fff1e 	bxeq	lr
+   1077c:	e59f3010 	ldr	r3, [pc, #16]	; 10794 <register_tm_clones+0x34>
+   10780:	e3530000 	cmp	r3, #0
+   10784:	012fff1e 	bxeq	lr
+   10788:	e12fff13 	bx	r3
+   1078c:	00021050 	.word	0x00021050
+   10790:	00021050 	.word	0x00021050
+   10794:	00000000 	.word	0x00000000
+
+00010798 <__do_global_dtors_aux>:
+   10798:	e92d4010 	push	{r4, lr}
+   1079c:	e59f4018 	ldr	r4, [pc, #24]	; 107bc <__do_global_dtors_aux+0x24>
+   107a0:	e5d43000 	ldrb	r3, [r4]
+   107a4:	e3530000 	cmp	r3, #0
+   107a8:	18bd8010 	popne	{r4, pc}
+   107ac:	ebffffdf 	bl	10730 <deregister_tm_clones>
+   107b0:	e3a03001 	mov	r3, #1
+   107b4:	e5c43000 	strb	r3, [r4]
+   107b8:	e8bd8010 	pop	{r4, pc}
+   107bc:	00021050 	.word	0x00021050
+
+000107c0 <frame_dummy>:
+   107c0:	e59f0028 	ldr	r0, [pc, #40]	; 107f0 <frame_dummy+0x30>
+   107c4:	e5903000 	ldr	r3, [r0]
+   107c8:	e3530000 	cmp	r3, #0
+   107cc:	1a000000 	bne	107d4 <frame_dummy+0x14>
+   107d0:	eaffffe2 	b	10760 <register_tm_clones>
+   107d4:	e59f3018 	ldr	r3, [pc, #24]	; 107f4 <frame_dummy+0x34>
+   107d8:	e3530000 	cmp	r3, #0
+   107dc:	0afffffb 	beq	107d0 <frame_dummy+0x10>
+   107e0:	e92d4010 	push	{r4, lr}
+   107e4:	e12fff33 	blx	r3
+   107e8:	e8bd4010 	pop	{r4, lr}
+   107ec:	eaffffdb 	b	10760 <register_tm_clones>
+   107f0:	00020efc 	.word	0x00020efc
+   107f4:	00000000 	.word	0x00000000
+
+000107f8 <MAIN__>:
+   107f8:	e92d4800 	push	{fp, lr}
+   107fc:	ed2d8b02 	vpush	{d8}
+   10800:	e28db00c 	add	fp, sp, #12
+   10804:	e24ddd06 	sub	sp, sp, #384	; 0x180
+   10808:	e59f3408 	ldr	r3, [pc, #1032]	; 10c18 <MAIN__+0x420>
+   1080c:	e50b3184 	str	r3, [fp, #-388]	; 0xfffffe7c
+   10810:	e3a03010 	mov	r3, #16
+   10814:	e50b3180 	str	r3, [fp, #-384]	; 0xfffffe80
+   10818:	e3a03080 	mov	r3, #128	; 0x80
+   1081c:	e50b318c 	str	r3, [fp, #-396]	; 0xfffffe74
+   10820:	e3a03005 	mov	r3, #5
+   10824:	e50b3188 	str	r3, [fp, #-392]	; 0xfffffe78
+   10828:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   1082c:	e1a00003 	mov	r0, r3
+   10830:	ebffff9d 	bl	106ac <_gfortran_st_read@plt>
+   10834:	e24b1010 	sub	r1, fp, #16
+   10838:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   1083c:	e3a02004 	mov	r2, #4
+   10840:	e1a00003 	mov	r0, r3
+   10844:	ebffff9e 	bl	106c4 <_gfortran_transfer_real@plt>
+   10848:	e24b1014 	sub	r1, fp, #20
+   1084c:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10850:	e3a02004 	mov	r2, #4
+   10854:	e1a00003 	mov	r0, r3
+   10858:	ebffff99 	bl	106c4 <_gfortran_transfer_real@plt>
+   1085c:	e24b1018 	sub	r1, fp, #24
+   10860:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10864:	e3a02004 	mov	r2, #4
+   10868:	e1a00003 	mov	r0, r3
+   1086c:	ebffff94 	bl	106c4 <_gfortran_transfer_real@plt>
+   10870:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10874:	e1a00003 	mov	r0, r3
+   10878:	ebffff7c 	bl	10670 <_gfortran_st_read_done@plt>
+   1087c:	e59f3394 	ldr	r3, [pc, #916]	; 10c18 <MAIN__+0x420>
+   10880:	e50b3184 	str	r3, [fp, #-388]	; 0xfffffe7c
+   10884:	e3a03011 	mov	r3, #17
+   10888:	e50b3180 	str	r3, [fp, #-384]	; 0xfffffe80
+   1088c:	e3a03080 	mov	r3, #128	; 0x80
+   10890:	e50b318c 	str	r3, [fp, #-396]	; 0xfffffe74
+   10894:	e3a03006 	mov	r3, #6
+   10898:	e50b3188 	str	r3, [fp, #-392]	; 0xfffffe78
+   1089c:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   108a0:	e1a00003 	mov	r0, r3
+   108a4:	ebffff7d 	bl	106a0 <_gfortran_st_write@plt>
+   108a8:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   108ac:	e3a0200d 	mov	r2, #13
+   108b0:	e59f1364 	ldr	r1, [pc, #868]	; 10c1c <MAIN__+0x424>
+   108b4:	e1a00003 	mov	r0, r3
+   108b8:	ebffff5a 	bl	10628 <_gfortran_transfer_character_write@plt>
+   108bc:	e24b1010 	sub	r1, fp, #16
+   108c0:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   108c4:	e3a02004 	mov	r2, #4
+   108c8:	e1a00003 	mov	r0, r3
+   108cc:	ebffff70 	bl	10694 <_gfortran_transfer_real_write@plt>
+   108d0:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   108d4:	e1a00003 	mov	r0, r3
+   108d8:	ebffff5b 	bl	1064c <_gfortran_st_write_done@plt>
+   108dc:	e59f3334 	ldr	r3, [pc, #820]	; 10c18 <MAIN__+0x420>
+   108e0:	e50b3184 	str	r3, [fp, #-388]	; 0xfffffe7c
+   108e4:	e3a03012 	mov	r3, #18
+   108e8:	e50b3180 	str	r3, [fp, #-384]	; 0xfffffe80
+   108ec:	e3a03080 	mov	r3, #128	; 0x80
+   108f0:	e50b318c 	str	r3, [fp, #-396]	; 0xfffffe74
+   108f4:	e3a03006 	mov	r3, #6
+   108f8:	e50b3188 	str	r3, [fp, #-392]	; 0xfffffe78
+   108fc:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10900:	e1a00003 	mov	r0, r3
+   10904:	ebffff65 	bl	106a0 <_gfortran_st_write@plt>
+   10908:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   1090c:	e3a0200d 	mov	r2, #13
+   10910:	e59f1308 	ldr	r1, [pc, #776]	; 10c20 <MAIN__+0x428>
+   10914:	e1a00003 	mov	r0, r3
+   10918:	ebffff42 	bl	10628 <_gfortran_transfer_character_write@plt>
+   1091c:	e24b1014 	sub	r1, fp, #20
+   10920:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10924:	e3a02004 	mov	r2, #4
+   10928:	e1a00003 	mov	r0, r3
+   1092c:	ebffff58 	bl	10694 <_gfortran_transfer_real_write@plt>
+   10930:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10934:	e1a00003 	mov	r0, r3
+   10938:	ebffff43 	bl	1064c <_gfortran_st_write_done@plt>
+   1093c:	e59f32d4 	ldr	r3, [pc, #724]	; 10c18 <MAIN__+0x420>
+   10940:	e50b3184 	str	r3, [fp, #-388]	; 0xfffffe7c
+   10944:	e3a03013 	mov	r3, #19
+   10948:	e50b3180 	str	r3, [fp, #-384]	; 0xfffffe80
+   1094c:	e3a03080 	mov	r3, #128	; 0x80
+   10950:	e50b318c 	str	r3, [fp, #-396]	; 0xfffffe74
+   10954:	e3a03006 	mov	r3, #6
+   10958:	e50b3188 	str	r3, [fp, #-392]	; 0xfffffe78
+   1095c:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10960:	e1a00003 	mov	r0, r3
+   10964:	ebffff4d 	bl	106a0 <_gfortran_st_write@plt>
+   10968:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   1096c:	e3a0200d 	mov	r2, #13
+   10970:	e59f12ac 	ldr	r1, [pc, #684]	; 10c24 <MAIN__+0x42c>
+   10974:	e1a00003 	mov	r0, r3
+   10978:	ebffff2a 	bl	10628 <_gfortran_transfer_character_write@plt>
+   1097c:	e24b1018 	sub	r1, fp, #24
+   10980:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10984:	e3a02004 	mov	r2, #4
+   10988:	e1a00003 	mov	r0, r3
+   1098c:	ebffff40 	bl	10694 <_gfortran_transfer_real_write@plt>
+   10990:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10994:	e1a00003 	mov	r0, r3
+   10998:	ebffff2b 	bl	1064c <_gfortran_st_write_done@plt>
+   1099c:	ed5b7a05 	vldr	s15, [fp, #-20]	; 0xffffffec
+   109a0:	ee277aa7 	vmul.f32	s14, s15, s15
+   109a4:	ed5b7a05 	vldr	s15, [fp, #-20]	; 0xffffffec
+   109a8:	eeb18a67 	vneg.f32	s16, s15
+   109ac:	ed5b7a04 	vldr	s15, [fp, #-16]
+   109b0:	eddf6a96 	vldr	s13, [pc, #600]	; 10c10 <MAIN__+0x418>
+   109b4:	ee676aa6 	vmul.f32	s13, s15, s13
+   109b8:	ed5b7a06 	vldr	s15, [fp, #-24]	; 0xffffffe8
+   109bc:	ee667aa7 	vmul.f32	s15, s13, s15
+   109c0:	ee777a67 	vsub.f32	s15, s14, s15
+   109c4:	ee172a90 	vmov	r2, s15
+   109c8:	e3a03000 	mov	r3, #0
+   109cc:	ee072a10 	vmov	s14, r2
+   109d0:	ee073a90 	vmov	s15, r3
+   109d4:	eeb00a47 	vmov.f32	s0, s14
+   109d8:	eef00a67 	vmov.f32	s1, s15
+   109dc:	ebffff17 	bl	10640 <csqrtf@plt>
+   109e0:	eef07a40 	vmov.f32	s15, s0
+   109e4:	eeb07a60 	vmov.f32	s14, s1
+   109e8:	eef06a47 	vmov.f32	s13, s14
+   109ec:	ee387a27 	vadd.f32	s14, s16, s15
+   109f0:	eddf7a87 	vldr	s15, [pc, #540]	; 10c14 <MAIN__+0x41c>
+   109f4:	ee767aa7 	vadd.f32	s15, s13, s15
+   109f8:	ee172a10 	vmov	r2, s14
+   109fc:	ee173a90 	vmov	r3, s15
+   10a00:	ee062a10 	vmov	s12, r2
+   10a04:	ee063a90 	vmov	s13, r3
+   10a08:	ed5b7a04 	vldr	s15, [fp, #-16]
+   10a0c:	ee777aa7 	vadd.f32	s15, s15, s15
+   10a10:	eeb07a67 	vmov.f32	s14, s15
+   10a14:	eddf5a7e 	vldr	s11, [pc, #504]	; 10c14 <MAIN__+0x41c>
+   10a18:	eec57a87 	vdiv.f32	s15, s11, s14
+   10a1c:	eddf5a7c 	vldr	s11, [pc, #496]	; 10c14 <MAIN__+0x41c>
+   10a20:	ee675aa5 	vmul.f32	s11, s15, s11
+   10a24:	ee377a25 	vadd.f32	s14, s14, s11
+   10a28:	ee665aa7 	vmul.f32	s11, s13, s15
+   10a2c:	ee765a25 	vadd.f32	s11, s12, s11
+   10a30:	ee667a27 	vmul.f32	s15, s12, s15
+   10a34:	ee366ae7 	vsub.f32	s12, s13, s15
+   10a38:	eec56a87 	vdiv.f32	s13, s11, s14
+   10a3c:	eec67a07 	vdiv.f32	s15, s12, s14
+   10a40:	ed4b6a08 	vstr	s13, [fp, #-32]	; 0xffffffe0
+   10a44:	ed4b7a07 	vstr	s15, [fp, #-28]	; 0xffffffe4
+   10a48:	ed5b7a05 	vldr	s15, [fp, #-20]	; 0xffffffec
+   10a4c:	ee277aa7 	vmul.f32	s14, s15, s15
+   10a50:	ed5b7a05 	vldr	s15, [fp, #-20]	; 0xffffffec
+   10a54:	eeb18a67 	vneg.f32	s16, s15
+   10a58:	ed5b7a04 	vldr	s15, [fp, #-16]
+   10a5c:	eddf6a6b 	vldr	s13, [pc, #428]	; 10c10 <MAIN__+0x418>
+   10a60:	ee676aa6 	vmul.f32	s13, s15, s13
+   10a64:	ed5b7a06 	vldr	s15, [fp, #-24]	; 0xffffffe8
+   10a68:	ee667aa7 	vmul.f32	s15, s13, s15
+   10a6c:	ee777a67 	vsub.f32	s15, s14, s15
+   10a70:	ee172a90 	vmov	r2, s15
+   10a74:	e3a03000 	mov	r3, #0
+   10a78:	ee072a10 	vmov	s14, r2
+   10a7c:	ee073a90 	vmov	s15, r3
+   10a80:	eeb00a47 	vmov.f32	s0, s14
+   10a84:	eef00a67 	vmov.f32	s1, s15
+   10a88:	ebfffeec 	bl	10640 <csqrtf@plt>
+   10a8c:	eef07a40 	vmov.f32	s15, s0
+   10a90:	eeb07a60 	vmov.f32	s14, s1
+   10a94:	eef06a47 	vmov.f32	s13, s14
+   10a98:	ee387a67 	vsub.f32	s14, s16, s15
+   10a9c:	eddf7a5c 	vldr	s15, [pc, #368]	; 10c14 <MAIN__+0x41c>
+   10aa0:	ee777ae6 	vsub.f32	s15, s15, s13
+   10aa4:	ee172a10 	vmov	r2, s14
+   10aa8:	ee173a90 	vmov	r3, s15
+   10aac:	ee062a10 	vmov	s12, r2
+   10ab0:	ee063a90 	vmov	s13, r3
+   10ab4:	ed5b7a04 	vldr	s15, [fp, #-16]
+   10ab8:	ee777aa7 	vadd.f32	s15, s15, s15
+   10abc:	eeb07a67 	vmov.f32	s14, s15
+   10ac0:	eddf5a53 	vldr	s11, [pc, #332]	; 10c14 <MAIN__+0x41c>
+   10ac4:	eec57a87 	vdiv.f32	s15, s11, s14
+   10ac8:	eddf5a51 	vldr	s11, [pc, #324]	; 10c14 <MAIN__+0x41c>
+   10acc:	ee675aa5 	vmul.f32	s11, s15, s11
+   10ad0:	ee377a25 	vadd.f32	s14, s14, s11
+   10ad4:	ee665aa7 	vmul.f32	s11, s13, s15
+   10ad8:	ee765a25 	vadd.f32	s11, s12, s11
+   10adc:	ee667a27 	vmul.f32	s15, s12, s15
+   10ae0:	ee366ae7 	vsub.f32	s12, s13, s15
+   10ae4:	eec56a87 	vdiv.f32	s13, s11, s14
+   10ae8:	eec67a07 	vdiv.f32	s15, s12, s14
+   10aec:	ed4b6a0a 	vstr	s13, [fp, #-40]	; 0xffffffd8
+   10af0:	ed4b7a09 	vstr	s15, [fp, #-36]	; 0xffffffdc
+   10af4:	e59f311c 	ldr	r3, [pc, #284]	; 10c18 <MAIN__+0x420>
+   10af8:	e50b3184 	str	r3, [fp, #-388]	; 0xfffffe7c
+   10afc:	e3a0301a 	mov	r3, #26
+   10b00:	e50b3180 	str	r3, [fp, #-384]	; 0xfffffe80
+   10b04:	e3a03080 	mov	r3, #128	; 0x80
+   10b08:	e50b318c 	str	r3, [fp, #-396]	; 0xfffffe74
+   10b0c:	e3a03006 	mov	r3, #6
+   10b10:	e50b3188 	str	r3, [fp, #-392]	; 0xfffffe78
+   10b14:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10b18:	e1a00003 	mov	r0, r3
+   10b1c:	ebfffedf 	bl	106a0 <_gfortran_st_write@plt>
+   10b20:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10b24:	e3a0200e 	mov	r2, #14
+   10b28:	e59f10f8 	ldr	r1, [pc, #248]	; 10c28 <MAIN__+0x430>
+   10b2c:	e1a00003 	mov	r0, r3
+   10b30:	ebfffebc 	bl	10628 <_gfortran_transfer_character_write@plt>
+   10b34:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10b38:	e1a00003 	mov	r0, r3
+   10b3c:	ebfffec2 	bl	1064c <_gfortran_st_write_done@plt>
+   10b40:	e59f30d0 	ldr	r3, [pc, #208]	; 10c18 <MAIN__+0x420>
+   10b44:	e50b3184 	str	r3, [fp, #-388]	; 0xfffffe7c
+   10b48:	e3a0301b 	mov	r3, #27
+   10b4c:	e50b3180 	str	r3, [fp, #-384]	; 0xfffffe80
+   10b50:	e3a03080 	mov	r3, #128	; 0x80
+   10b54:	e50b318c 	str	r3, [fp, #-396]	; 0xfffffe74
+   10b58:	e3a03006 	mov	r3, #6
+   10b5c:	e50b3188 	str	r3, [fp, #-392]	; 0xfffffe78
+   10b60:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10b64:	e1a00003 	mov	r0, r3
+   10b68:	ebfffecc 	bl	106a0 <_gfortran_st_write@plt>
+   10b6c:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10b70:	e3a02004 	mov	r2, #4
+   10b74:	e59f10b0 	ldr	r1, [pc, #176]	; 10c2c <MAIN__+0x434>
+   10b78:	e1a00003 	mov	r0, r3
+   10b7c:	ebfffea9 	bl	10628 <_gfortran_transfer_character_write@plt>
+   10b80:	e24b1020 	sub	r1, fp, #32
+   10b84:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10b88:	e3a02004 	mov	r2, #4
+   10b8c:	e1a00003 	mov	r0, r3
+   10b90:	ebfffec8 	bl	106b8 <_gfortran_transfer_complex_write@plt>
+   10b94:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10b98:	e1a00003 	mov	r0, r3
+   10b9c:	ebfffeaa 	bl	1064c <_gfortran_st_write_done@plt>
+   10ba0:	e59f3070 	ldr	r3, [pc, #112]	; 10c18 <MAIN__+0x420>
+   10ba4:	e50b3184 	str	r3, [fp, #-388]	; 0xfffffe7c
+   10ba8:	e3a0301c 	mov	r3, #28
+   10bac:	e50b3180 	str	r3, [fp, #-384]	; 0xfffffe80
+   10bb0:	e3a03080 	mov	r3, #128	; 0x80
+   10bb4:	e50b318c 	str	r3, [fp, #-396]	; 0xfffffe74
+   10bb8:	e3a03006 	mov	r3, #6
+   10bbc:	e50b3188 	str	r3, [fp, #-392]	; 0xfffffe78
+   10bc0:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10bc4:	e1a00003 	mov	r0, r3
+   10bc8:	ebfffeb4 	bl	106a0 <_gfortran_st_write@plt>
+   10bcc:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10bd0:	e3a02004 	mov	r2, #4
+   10bd4:	e59f1054 	ldr	r1, [pc, #84]	; 10c30 <MAIN__+0x438>
+   10bd8:	e1a00003 	mov	r0, r3
+   10bdc:	ebfffe91 	bl	10628 <_gfortran_transfer_character_write@plt>
+   10be0:	e24b1028 	sub	r1, fp, #40	; 0x28
+   10be4:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10be8:	e3a02004 	mov	r2, #4
+   10bec:	e1a00003 	mov	r0, r3
+   10bf0:	ebfffeb0 	bl	106b8 <_gfortran_transfer_complex_write@plt>
+   10bf4:	e24b3f63 	sub	r3, fp, #396	; 0x18c
+   10bf8:	e1a00003 	mov	r0, r3
+   10bfc:	ebfffe92 	bl	1064c <_gfortran_st_write_done@plt>
+   10c00:	e1a00000 	nop			; (mov r0, r0)
+   10c04:	e24bd00c 	sub	sp, fp, #12
+   10c08:	ecbd8b02 	vpop	{d8}
+   10c0c:	e8bd8800 	pop	{fp, pc}
+   10c10:	40800000 	.word	0x40800000
+   10c14:	00000000 	.word	0x00000000
+   10c18:	00010ce8 	.word	0x00010ce8
+   10c1c:	00010d08 	.word	0x00010d08
+   10c20:	00010d18 	.word	0x00010d18
+   10c24:	00010d28 	.word	0x00010d28
+   10c28:	00010d38 	.word	0x00010d38
+   10c2c:	00010d48 	.word	0x00010d48
+   10c30:	00010d4c 	.word	0x00010d4c
+
+00010c34 <main>:
+   10c34:	e92d4800 	push	{fp, lr}
+   10c38:	e28db004 	add	fp, sp, #4
+   10c3c:	e24dd008 	sub	sp, sp, #8
+   10c40:	e50b0008 	str	r0, [fp, #-8]
+   10c44:	e50b100c 	str	r1, [fp, #-12]
+   10c48:	e51b100c 	ldr	r1, [fp, #-12]
+   10c4c:	e51b0008 	ldr	r0, [fp, #-8]
+   10c50:	ebfffe8c 	bl	10688 <_gfortran_set_args@plt>
+   10c54:	e59f1018 	ldr	r1, [pc, #24]	; 10c74 <main+0x40>
+   10c58:	e3a00009 	mov	r0, #9
+   10c5c:	ebfffe86 	bl	1067c <_gfortran_set_options@plt>
+   10c60:	ebfffee4 	bl	107f8 <MAIN__>
+   10c64:	e3a03000 	mov	r3, #0
+   10c68:	e1a00003 	mov	r0, r3
+   10c6c:	e24bd004 	sub	sp, fp, #4
+   10c70:	e8bd8800 	pop	{fp, pc}
+   10c74:	00010d50 	.word	0x00010d50
+
+00010c78 <__libc_csu_init>:
+   10c78:	e92d47f0 	push	{r4, r5, r6, r7, r8, r9, sl, lr}
+   10c7c:	e1a07000 	mov	r7, r0
+   10c80:	e59f6048 	ldr	r6, [pc, #72]	; 10cd0 <__libc_csu_init+0x58>
+   10c84:	e59f5048 	ldr	r5, [pc, #72]	; 10cd4 <__libc_csu_init+0x5c>
+   10c88:	e08f6006 	add	r6, pc, r6
+   10c8c:	e08f5005 	add	r5, pc, r5
+   10c90:	e0466005 	sub	r6, r6, r5
+   10c94:	e1a08001 	mov	r8, r1
+   10c98:	e1a09002 	mov	r9, r2
+   10c9c:	ebfffe59 	bl	10608 <_init>
+   10ca0:	e1b06146 	asrs	r6, r6, #2
+   10ca4:	08bd87f0 	popeq	{r4, r5, r6, r7, r8, r9, sl, pc}
+   10ca8:	e3a04000 	mov	r4, #0
+   10cac:	e2844001 	add	r4, r4, #1
+   10cb0:	e4953004 	ldr	r3, [r5], #4
+   10cb4:	e1a02009 	mov	r2, r9
+   10cb8:	e1a01008 	mov	r1, r8
+   10cbc:	e1a00007 	mov	r0, r7
+   10cc0:	e12fff33 	blx	r3
+   10cc4:	e1560004 	cmp	r6, r4
+   10cc8:	1afffff7 	bne	10cac <__libc_csu_init+0x34>
+   10ccc:	e8bd87f0 	pop	{r4, r5, r6, r7, r8, r9, sl, pc}
+   10cd0:	00010268 	.word	0x00010268
+   10cd4:	00010260 	.word	0x00010260
+
+00010cd8 <__libc_csu_fini>:
+   10cd8:	e12fff1e 	bx	lr
+
+Disassembly of section .fini:
+
+00010cdc <_fini>:
+   10cdc:	e92d4008 	push	{r3, lr}
+   10ce0:	e8bd8008 	pop	{r3, pc}
