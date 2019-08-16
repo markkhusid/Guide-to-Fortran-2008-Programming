@@ -1,0 +1,305 @@
+
+case_study_3_17.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <__function_module_MOD_f>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	53                   	push   %ebx
+   4:	83 ec 14             	sub    $0x14,%esp
+   7:	e8 fc ff ff ff       	call   8 <__function_module_MOD_f+0x8>
+   c:	81 c3 02 00 00 00    	add    $0x2,%ebx
+  12:	8b 45 08             	mov    0x8(%ebp),%eax
+  15:	d9 00                	flds   (%eax)
+  17:	83 ec 08             	sub    $0x8,%esp
+  1a:	d9 83 74 00 00 00    	flds   0x74(%ebx)
+  20:	8d 64 24 fc          	lea    -0x4(%esp),%esp
+  24:	d9 1c 24             	fstps  (%esp)
+  27:	8d 64 24 fc          	lea    -0x4(%esp),%esp
+  2b:	d9 1c 24             	fstps  (%esp)
+  2e:	e8 fc ff ff ff       	call   2f <__function_module_MOD_f+0x2f>
+  33:	83 c4 10             	add    $0x10,%esp
+  36:	d9 e0                	fchs   
+  38:	83 ec 0c             	sub    $0xc,%esp
+  3b:	8d 64 24 fc          	lea    -0x4(%esp),%esp
+  3f:	d9 1c 24             	fstps  (%esp)
+  42:	e8 fc ff ff ff       	call   43 <__function_module_MOD_f+0x43>
+  47:	83 c4 10             	add    $0x10,%esp
+  4a:	d9 5d f4             	fstps  -0xc(%ebp)
+  4d:	d9 45 f4             	flds   -0xc(%ebp)
+  50:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+  53:	c9                   	leave  
+  54:	c3                   	ret    
+
+00000055 <__integral_module_MOD_integral>:
+  55:	55                   	push   %ebp
+  56:	89 e5                	mov    %esp,%ebp
+  58:	53                   	push   %ebx
+  59:	83 ec 44             	sub    $0x44,%esp
+  5c:	e8 fc ff ff ff       	call   5d <__integral_module_MOD_integral+0x8>
+  61:	81 c3 02 00 00 00    	add    $0x2,%ebx
+  67:	8b 45 10             	mov    0x10(%ebp),%eax
+  6a:	d9 00                	flds   (%eax)
+  6c:	8b 45 0c             	mov    0xc(%ebp),%eax
+  6f:	d9 00                	flds   (%eax)
+  71:	de e9                	fsubrp %st,%st(1)
+  73:	d9 5d f0             	fstps  -0x10(%ebp)
+  76:	8b 45 0c             	mov    0xc(%ebp),%eax
+  79:	d9 00                	flds   (%eax)
+  7b:	8b 45 10             	mov    0x10(%ebp),%eax
+  7e:	d9 00                	flds   (%eax)
+  80:	de c1                	faddp  %st,%st(1)
+  82:	d9 83 74 00 00 00    	flds   0x74(%ebx)
+  88:	de f9                	fdivrp %st,%st(1)
+  8a:	d9 5d dc             	fstps  -0x24(%ebp)
+  8d:	83 ec 0c             	sub    $0xc,%esp
+  90:	ff 75 0c             	pushl  0xc(%ebp)
+  93:	8b 45 08             	mov    0x8(%ebp),%eax
+  96:	ff d0                	call   *%eax
+  98:	83 c4 10             	add    $0x10,%esp
+  9b:	d9 5d c4             	fstps  -0x3c(%ebp)
+  9e:	83 ec 0c             	sub    $0xc,%esp
+  a1:	ff 75 10             	pushl  0x10(%ebp)
+  a4:	8b 45 08             	mov    0x8(%ebp),%eax
+  a7:	ff d0                	call   *%eax
+  a9:	83 c4 10             	add    $0x10,%esp
+  ac:	d8 45 c4             	fadds  -0x3c(%ebp)
+  af:	d8 4d f0             	fmuls  -0x10(%ebp)
+  b2:	d9 83 74 00 00 00    	flds   0x74(%ebx)
+  b8:	de f9                	fdivrp %st,%st(1)
+  ba:	d9 5d ec             	fstps  -0x14(%ebp)
+  bd:	d9 45 f0             	flds   -0x10(%ebp)
+  c0:	d9 83 74 00 00 00    	flds   0x74(%ebx)
+  c6:	de f9                	fdivrp %st,%st(1)
+  c8:	d9 5d c4             	fstps  -0x3c(%ebp)
+  cb:	83 ec 0c             	sub    $0xc,%esp
+  ce:	ff 75 0c             	pushl  0xc(%ebp)
+  d1:	8b 45 08             	mov    0x8(%ebp),%eax
+  d4:	ff d0                	call   *%eax
+  d6:	83 c4 10             	add    $0x10,%esp
+  d9:	d9 5d c0             	fstps  -0x40(%ebp)
+  dc:	83 ec 0c             	sub    $0xc,%esp
+  df:	8d 45 dc             	lea    -0x24(%ebp),%eax
+  e2:	50                   	push   %eax
+  e3:	8b 45 08             	mov    0x8(%ebp),%eax
+  e6:	ff d0                	call   *%eax
+  e8:	83 c4 10             	add    $0x10,%esp
+  eb:	d8 45 c0             	fadds  -0x40(%ebp)
+  ee:	d9 45 c4             	flds   -0x3c(%ebp)
+  f1:	de c9                	fmulp  %st,%st(1)
+  f3:	d9 83 74 00 00 00    	flds   0x74(%ebx)
+  f9:	de f9                	fdivrp %st,%st(1)
+  fb:	d9 5d c4             	fstps  -0x3c(%ebp)
+  fe:	d9 45 f0             	flds   -0x10(%ebp)
+ 101:	d9 83 74 00 00 00    	flds   0x74(%ebx)
+ 107:	de f9                	fdivrp %st,%st(1)
+ 109:	d9 5d c0             	fstps  -0x40(%ebp)
+ 10c:	83 ec 0c             	sub    $0xc,%esp
+ 10f:	8d 45 dc             	lea    -0x24(%ebp),%eax
+ 112:	50                   	push   %eax
+ 113:	8b 45 08             	mov    0x8(%ebp),%eax
+ 116:	ff d0                	call   *%eax
+ 118:	83 c4 10             	add    $0x10,%esp
+ 11b:	d9 5d bc             	fstps  -0x44(%ebp)
+ 11e:	83 ec 0c             	sub    $0xc,%esp
+ 121:	ff 75 10             	pushl  0x10(%ebp)
+ 124:	8b 45 08             	mov    0x8(%ebp),%eax
+ 127:	ff d0                	call   *%eax
+ 129:	83 c4 10             	add    $0x10,%esp
+ 12c:	d8 45 bc             	fadds  -0x44(%ebp)
+ 12f:	d9 45 c0             	flds   -0x40(%ebp)
+ 132:	de c9                	fmulp  %st,%st(1)
+ 134:	d9 83 74 00 00 00    	flds   0x74(%ebx)
+ 13a:	de f9                	fdivrp %st,%st(1)
+ 13c:	d8 45 c4             	fadds  -0x3c(%ebp)
+ 13f:	d9 5d e8             	fstps  -0x18(%ebp)
+ 142:	d9 45 ec             	flds   -0x14(%ebp)
+ 145:	d8 65 e8             	fsubs  -0x18(%ebp)
+ 148:	d9 e1                	fabs   
+ 14a:	8b 45 14             	mov    0x14(%ebp),%eax
+ 14d:	d9 00                	flds   (%eax)
+ 14f:	d9 83 78 00 00 00    	flds   0x78(%ebx)
+ 155:	de c9                	fmulp  %st,%st(1)
+ 157:	df f1                	fcomip %st(1),%st
+ 159:	dd d8                	fstp   %st(0)
+ 15b:	76 08                	jbe    165 <__integral_module_MOD_integral+0x110>
+ 15d:	d9 45 e8             	flds   -0x18(%ebp)
+ 160:	d9 5d f4             	fstps  -0xc(%ebp)
+ 163:	eb 5b                	jmp    1c0 <__integral_module_MOD_integral+0x16b>
+ 165:	8b 45 14             	mov    0x14(%ebp),%eax
+ 168:	d9 00                	flds   (%eax)
+ 16a:	d9 83 74 00 00 00    	flds   0x74(%ebx)
+ 170:	de f9                	fdivrp %st,%st(1)
+ 172:	d9 5d d8             	fstps  -0x28(%ebp)
+ 175:	8d 45 d8             	lea    -0x28(%ebp),%eax
+ 178:	50                   	push   %eax
+ 179:	8d 45 dc             	lea    -0x24(%ebp),%eax
+ 17c:	50                   	push   %eax
+ 17d:	ff 75 0c             	pushl  0xc(%ebp)
+ 180:	ff 75 08             	pushl  0x8(%ebp)
+ 183:	e8 fc ff ff ff       	call   184 <__integral_module_MOD_integral+0x12f>
+ 188:	83 c4 10             	add    $0x10,%esp
+ 18b:	d9 5d e4             	fstps  -0x1c(%ebp)
+ 18e:	8b 45 14             	mov    0x14(%ebp),%eax
+ 191:	d9 00                	flds   (%eax)
+ 193:	d9 83 74 00 00 00    	flds   0x74(%ebx)
+ 199:	de f9                	fdivrp %st,%st(1)
+ 19b:	d9 5d d4             	fstps  -0x2c(%ebp)
+ 19e:	8d 45 d4             	lea    -0x2c(%ebp),%eax
+ 1a1:	50                   	push   %eax
+ 1a2:	ff 75 10             	pushl  0x10(%ebp)
+ 1a5:	8d 45 dc             	lea    -0x24(%ebp),%eax
+ 1a8:	50                   	push   %eax
+ 1a9:	ff 75 08             	pushl  0x8(%ebp)
+ 1ac:	e8 fc ff ff ff       	call   1ad <__integral_module_MOD_integral+0x158>
+ 1b1:	83 c4 10             	add    $0x10,%esp
+ 1b4:	d9 5d e0             	fstps  -0x20(%ebp)
+ 1b7:	d9 45 e4             	flds   -0x1c(%ebp)
+ 1ba:	d8 45 e0             	fadds  -0x20(%ebp)
+ 1bd:	d9 5d f4             	fstps  -0xc(%ebp)
+ 1c0:	d9 45 f4             	flds   -0xc(%ebp)
+ 1c3:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 1c6:	c9                   	leave  
+ 1c7:	c3                   	ret    
+
+000001c8 <MAIN__>:
+ 1c8:	55                   	push   %ebp
+ 1c9:	89 e5                	mov    %esp,%ebp
+ 1cb:	53                   	push   %ebx
+ 1cc:	81 ec 64 01 00 00    	sub    $0x164,%esp
+ 1d2:	e8 fc ff ff ff       	call   1d3 <MAIN__+0xb>
+ 1d7:	81 c3 02 00 00 00    	add    $0x2,%ebx
+ 1dd:	d9 83 7c 00 00 00    	flds   0x7c(%ebx)
+ 1e3:	d9 5d ec             	fstps  -0x14(%ebp)
+ 1e6:	d9 83 80 00 00 00    	flds   0x80(%ebx)
+ 1ec:	d9 5d f0             	fstps  -0x10(%ebp)
+ 1ef:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+ 1f5:	50                   	push   %eax
+ 1f6:	8d 45 f0             	lea    -0x10(%ebp),%eax
+ 1f9:	50                   	push   %eax
+ 1fa:	8d 45 ec             	lea    -0x14(%ebp),%eax
+ 1fd:	50                   	push   %eax
+ 1fe:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+ 204:	50                   	push   %eax
+ 205:	e8 fc ff ff ff       	call   206 <MAIN__+0x3e>
+ 20a:	83 c4 10             	add    $0x10,%esp
+ 20d:	d9 5d f4             	fstps  -0xc(%ebp)
+ 210:	8d 83 04 00 00 00    	lea    0x4(%ebx),%eax
+ 216:	89 85 a0 fe ff ff    	mov    %eax,-0x160(%ebp)
+ 21c:	c7 85 a4 fe ff ff 50 	movl   $0x50,-0x15c(%ebp)
+ 223:	00 00 00 
+ 226:	8d 83 18 00 00 00    	lea    0x18(%ebx),%eax
+ 22c:	89 85 c8 fe ff ff    	mov    %eax,-0x138(%ebp)
+ 232:	c7 85 cc fe ff ff 0a 	movl   $0xa,-0x134(%ebp)
+ 239:	00 00 00 
+ 23c:	c7 85 98 fe ff ff 00 	movl   $0x1000,-0x168(%ebp)
+ 243:	10 00 00 
+ 246:	c7 85 9c fe ff ff 06 	movl   $0x6,-0x164(%ebp)
+ 24d:	00 00 00 
+ 250:	83 ec 0c             	sub    $0xc,%esp
+ 253:	8d 85 98 fe ff ff    	lea    -0x168(%ebp),%eax
+ 259:	50                   	push   %eax
+ 25a:	e8 fc ff ff ff       	call   25b <MAIN__+0x93>
+ 25f:	83 c4 10             	add    $0x10,%esp
+ 262:	83 ec 04             	sub    $0x4,%esp
+ 265:	6a 1e                	push   $0x1e
+ 267:	8d 83 22 00 00 00    	lea    0x22(%ebx),%eax
+ 26d:	50                   	push   %eax
+ 26e:	8d 85 98 fe ff ff    	lea    -0x168(%ebp),%eax
+ 274:	50                   	push   %eax
+ 275:	e8 fc ff ff ff       	call   276 <MAIN__+0xae>
+ 27a:	83 c4 10             	add    $0x10,%esp
+ 27d:	83 ec 04             	sub    $0x4,%esp
+ 280:	6a 04                	push   $0x4
+ 282:	8d 45 f4             	lea    -0xc(%ebp),%eax
+ 285:	50                   	push   %eax
+ 286:	8d 85 98 fe ff ff    	lea    -0x168(%ebp),%eax
+ 28c:	50                   	push   %eax
+ 28d:	e8 fc ff ff ff       	call   28e <MAIN__+0xc6>
+ 292:	83 c4 10             	add    $0x10,%esp
+ 295:	83 ec 0c             	sub    $0xc,%esp
+ 298:	8d 85 98 fe ff ff    	lea    -0x168(%ebp),%eax
+ 29e:	50                   	push   %eax
+ 29f:	e8 fc ff ff ff       	call   2a0 <MAIN__+0xd8>
+ 2a4:	83 c4 10             	add    $0x10,%esp
+ 2a7:	8d 83 04 00 00 00    	lea    0x4(%ebx),%eax
+ 2ad:	89 85 a0 fe ff ff    	mov    %eax,-0x160(%ebp)
+ 2b3:	c7 85 a4 fe ff ff 51 	movl   $0x51,-0x15c(%ebp)
+ 2ba:	00 00 00 
+ 2bd:	8d 83 18 00 00 00    	lea    0x18(%ebx),%eax
+ 2c3:	89 85 c8 fe ff ff    	mov    %eax,-0x138(%ebp)
+ 2c9:	c7 85 cc fe ff ff 0a 	movl   $0xa,-0x134(%ebp)
+ 2d0:	00 00 00 
+ 2d3:	c7 85 98 fe ff ff 00 	movl   $0x1000,-0x168(%ebp)
+ 2da:	10 00 00 
+ 2dd:	c7 85 9c fe ff ff 06 	movl   $0x6,-0x164(%ebp)
+ 2e4:	00 00 00 
+ 2e7:	83 ec 0c             	sub    $0xc,%esp
+ 2ea:	8d 85 98 fe ff ff    	lea    -0x168(%ebp),%eax
+ 2f0:	50                   	push   %eax
+ 2f1:	e8 fc ff ff ff       	call   2f2 <MAIN__+0x12a>
+ 2f6:	83 c4 10             	add    $0x10,%esp
+ 2f9:	83 ec 04             	sub    $0x4,%esp
+ 2fc:	6a 14                	push   $0x14
+ 2fe:	8d 83 40 00 00 00    	lea    0x40(%ebx),%eax
+ 304:	50                   	push   %eax
+ 305:	8d 85 98 fe ff ff    	lea    -0x168(%ebp),%eax
+ 30b:	50                   	push   %eax
+ 30c:	e8 fc ff ff ff       	call   30d <MAIN__+0x145>
+ 311:	83 c4 10             	add    $0x10,%esp
+ 314:	83 ec 04             	sub    $0x4,%esp
+ 317:	6a 04                	push   $0x4
+ 319:	8d 83 54 00 00 00    	lea    0x54(%ebx),%eax
+ 31f:	50                   	push   %eax
+ 320:	8d 85 98 fe ff ff    	lea    -0x168(%ebp),%eax
+ 326:	50                   	push   %eax
+ 327:	e8 fc ff ff ff       	call   328 <MAIN__+0x160>
+ 32c:	83 c4 10             	add    $0x10,%esp
+ 32f:	83 ec 0c             	sub    $0xc,%esp
+ 332:	8d 85 98 fe ff ff    	lea    -0x168(%ebp),%eax
+ 338:	50                   	push   %eax
+ 339:	e8 fc ff ff ff       	call   33a <MAIN__+0x172>
+ 33e:	83 c4 10             	add    $0x10,%esp
+ 341:	90                   	nop
+ 342:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 345:	c9                   	leave  
+ 346:	c3                   	ret    
+
+00000347 <main>:
+ 347:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+ 34b:	83 e4 f0             	and    $0xfffffff0,%esp
+ 34e:	ff 71 fc             	pushl  -0x4(%ecx)
+ 351:	55                   	push   %ebp
+ 352:	89 e5                	mov    %esp,%ebp
+ 354:	53                   	push   %ebx
+ 355:	51                   	push   %ecx
+ 356:	e8 fc ff ff ff       	call   357 <main+0x10>
+ 35b:	81 c3 02 00 00 00    	add    $0x2,%ebx
+ 361:	89 c8                	mov    %ecx,%eax
+ 363:	83 ec 08             	sub    $0x8,%esp
+ 366:	ff 70 04             	pushl  0x4(%eax)
+ 369:	ff 30                	pushl  (%eax)
+ 36b:	e8 fc ff ff ff       	call   36c <main+0x25>
+ 370:	83 c4 10             	add    $0x10,%esp
+ 373:	83 ec 08             	sub    $0x8,%esp
+ 376:	8d 83 58 00 00 00    	lea    0x58(%ebx),%eax
+ 37c:	50                   	push   %eax
+ 37d:	6a 07                	push   $0x7
+ 37f:	e8 fc ff ff ff       	call   380 <main+0x39>
+ 384:	83 c4 10             	add    $0x10,%esp
+ 387:	e8 3c fe ff ff       	call   1c8 <MAIN__>
+ 38c:	b8 00 00 00 00       	mov    $0x0,%eax
+ 391:	8d 65 f8             	lea    -0x8(%ebp),%esp
+ 394:	59                   	pop    %ecx
+ 395:	5b                   	pop    %ebx
+ 396:	5d                   	pop    %ebp
+ 397:	8d 61 fc             	lea    -0x4(%ecx),%esp
+ 39a:	c3                   	ret    
+
+Disassembly of section .text.__x86.get_pc_thunk.bx:
+
+00000000 <__x86.get_pc_thunk.bx>:
+   0:	8b 1c 24             	mov    (%esp),%ebx
+   3:	c3                   	ret    

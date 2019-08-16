@@ -31,7 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.f95" />
+		<Unit filename="Chapter_5/example_p168.f08" />
 		<Extensions>
 			<code_completion />
 			<debugger />
